@@ -1,0 +1,27 @@
+<div class="photo-slider-container" ng-show="visible">
+  <div class="slider-header invisible" ng-class="{'visible':isThumbnailsVisible %>" ng-click="preventDefaoutBehaviour($event)">
+    <div class="slider-title">
+      {{photos[index].title}}
+    </div>
+    <a class="slider-icon-close" href="#" ng-click="close($event)">
+      <md>-icon.icon-dimension24{ icon: asset_path('icons/ic_white_clear_24px.svg') }</md>
+    </a>
+  </div>
+  <div class="main-body" ng-click="close($event)">
+    <div class="photo-wrapper"></div>
+    <div class="prev invisible" href="#" ng-class="{'visible':isThumbnailsVisible, 'shown': hasPreviousSibling %>" ng-click="prev($event)"></div>
+    <div class="next invisible" href="#" ng-class="{'visible':isThumbnailsVisible, 'shown': hasNextSibling %>" ng-click="next($event)"></div>
+  </div>
+  <div class="slider-footer invisible" ng-class="{'visible':isThumbnailsVisible %>">
+    <a class="slider-button" href="#" ng-class="{'slider-button-active' : isThumbnailsVisible %>" ng-click="toggleThumbnails($event)">
+      {{index + 1}} of {{photos.length}} photos
+    </a>
+    <div class="slider-thumbnail-wrapper" ng-show="isThumbnailsVisible">
+      <div class="slider-thumbnail" ng-class="{'active' : ($index == index) %>" ng-click="setIndex($index)" ng-repeat="photo in photos">
+        <div class="image-center">
+          <img ng-src="{{photo.url}}"/>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

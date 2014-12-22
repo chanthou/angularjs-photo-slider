@@ -1,11 +1,6 @@
 
 /*
 Usage:
-1. Add 'yoolk.directives' as dependency to your app-module
-    Example:
-      angular.module('homeIndex', ['yoolk.directives']
-
-2. add directive 'yk-photo-slider'
     Example:
           <img yk-photo-slider-trigger="" src="https://dl.dropboxusercontent.com/u/39215269/photo-slider/1.jpg">
           <img yk-photo-slider-trigger="" src="https://dl.dropboxusercontent.com/u/39215269/photo-slider/2.jpg">
@@ -25,7 +20,7 @@ angular.module('ykPhotoSlider').directive('ykPhotoSlider', function() {
     link: function(scope, element, attrs) {
       return scope.bindPhotoDomClickEvent();
     },
-    templateUrl: '<%= asset_path("shared/photo_slider.html") %>',
+    templateUrl: 'template.html',
     controller: PhotoSliderController
   };
 });
