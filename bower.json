@@ -1,0 +1,19 @@
+{
+  "name": "angularjs-photo-slider",
+  "main": "photo-slider.js",
+  "version": "1.0.0",
+  "homepage": "https://github.com/chanthou/angularjs-photo-slider",
+  "authors": [
+    "chanthou <chanthou98@gmail.com>",
+    "sreymoch <dwk.sreymouchleng@gmail.com>"
+  ],
+  "description": "AngularJS directive for sliding photos like Google Drive photo slider.",
+  "keywords": [
+    "angular",
+    "angularjs",
+    "photo",
+    "slide",
+    "slider"
+  ],
+  "license": "MIT"
+}

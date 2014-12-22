@@ -1,0 +1,198 @@
+.photo-slider-container {
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9997;
+  position: fixed;
+  background: rgba(43,43,43,0.9);
+
+  &:hover {
+    .invisible {
+      display: block;
+    }
+  }
+
+  .slider-header {
+    left: 0;
+    top: 0;
+    z-index: 1;
+    width: 100%;
+    height: 52px;
+    padding: 0 24px;
+    background: #111;
+    position: absolute;
+
+    .slider-title {
+      color: #fff;
+      font-size: 16px;
+      line-height: 52px;
+      display: inline-block;
+    }
+
+    .slider-icon-close {
+      width: 50px;
+      height: 52px;
+      float: right;
+      display: inline-block;
+      text-align: center;
+      line-height: 52px;
+      margin-right: 2px;
+      padding-top: 3px;
+      &:hover{ background: #121212; }
+    }
+  }
+
+  .slider-icon {
+    margin-right: 4px;
+  }
+
+  .main-body{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+  }
+
+  .slider-footer {
+    min-height: 78px;
+    width: 100%;
+    bottom: 0;
+    position: absolute;
+  }
+
+  .slider-button {
+    height: 25px;
+    line-height: 25px;
+    color: rgba(255,255,255,0.9) !important;
+    font-size: 11px;
+    text-align: center;
+    border-radius: 3px;
+    text-shadow: 0 1px 1px rgba(0,0,0,0.8);
+    top: 30px;
+    left: 24px;
+    z-index: 1;
+    cursor: pointer;
+    position: absolute;
+    padding: 0 14px 0 32px;
+    background-image: "https://dl.dropboxusercontent.com/u/39215269/photo-slider/ic_view_thumbnail_photo_slider_14px.png";
+    background-size: 14px 11px;
+    background-position: 14px 7px;
+    background-repeat: no-repeat;
+    background-color: #222;
+    text-decoration: none;
+    &:hover { background-color: rgba(0,0,0,0.9);}
+  }
+
+  .slider-button-active {
+    background-image: "https://dl.dropboxusercontent.com/u/39215269/photo-slider/ic_arrow_down_photo_slider.png";
+    background-size: 8px 6px;
+    background-position: 14px 10px;
+  }
+
+  .slider-thumbnail-wrapper {
+    width: 100%;
+    min-height: 78px;
+    padding: 2px;
+    bottom: 0;
+    background-color: #121212;
+    position: relative;
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+  }
+
+  .slider-thumbnail{
+    width: 86px;
+    height: 66px;
+    margin: 4px;
+    display: inline-block;
+    &:hover {
+      width: 90px;
+      height: 70px;
+      margin: 2px;
+      border-radius: 3px;
+      border: 2px solid #9c9c9c;
+    }
+  }
+
+  .image-center {
+    width: 86px;
+    height: 66px;
+    text-align: center;
+    display: table-cell;
+    vertical-align: middle;
+    line-height: 12px;
+    img {
+      max-width: 86px;
+      max-height: 66px;
+    }
+  }
+
+  .photo-wrapper {
+    position: absolute;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .prev, .next {
+    height: 30px;
+    width: 40px;
+    top: 80px;
+    bottom: 80px;
+    margin-bottom: auto;
+    margin-top: auto;
+    position: absolute;
+    outline: 0;
+    z-index: 10001;
+    cursor: pointer;
+    border-radius: 3px;
+    -webkit-user-select: none;
+    background-color: #080808;
+    background-size: 10px 14px;
+    background-position: 14px 8px;
+    background-repeat: no-repeat;
+    opacity: 0;
+
+    &:hover {
+      background-size: 28px;
+      background-position: 6px;
+    }
+  }
+
+  .next {
+    right: 24px;
+    background-image: "https://dl.dropboxusercontent.com/u/39215269/photo-slider/ic_chevron_right_white.png";
+    &:hover {
+      background-image: "https://dl.dropboxusercontent.com/u/39215269/photo-slider/ic_chevron_right_white_24px_hover.png";
+    }
+  }
+
+  .prev {
+    left: 24px;
+    background-image: "https://dl.dropboxusercontent.com/u/39215269/photo-slider/ic_chevron_left_white_24px.png";
+    &:hover {
+      background-image: "https://dl.dropboxusercontent.com/u/39215269/photo-slider/ic_chevron_left_white_24px_hover.png";
+    }
+  }
+
+  .active {
+    width: 90px;
+    height: 70px;
+    margin: 2px;
+    border-radius: 3px;
+    border: 2px solid #fff;
+    &:hover {
+      border-color: #fff;
+    }
+  }
+  .invisible {
+    display: none;
+  }
+  .visible {
+    display: block;
+  }
+  .shown {
+    opacity: 1;
+  }
+}
